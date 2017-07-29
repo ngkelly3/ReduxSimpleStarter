@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import SearchBar from './components/search_bar';
 
 // Google API Key that will allow us to make requests to YouTube
 const API_KEY = 'AIzaSyB_LPp1iO9UqxA_HK8DtQ27JNm6MSothpk';
@@ -9,7 +10,9 @@ const API_KEY = 'AIzaSyB_LPp1iO9UqxA_HK8DtQ27JNm6MSothpk';
 
 const App = () => {
   return (
-    <div>Hi!</div>
+    <div>
+      <SearchBar />
+    </div>
   )
 }
 
