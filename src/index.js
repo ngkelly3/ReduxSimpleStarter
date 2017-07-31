@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import YTSearch from 'youtube-api-search';
 import SearchBar from './components/search_bar';
+import VideoList from './components/video_list';
 
 // Google API Key that will allow us to make requests to YouTube
 const API_KEY = 'AIzaSyB_LPp1iO9UqxA_HK8DtQ27JNm6MSothpk';
@@ -14,14 +15,20 @@ class App extends Component {
     super(props);
 
     this.state = {videos: []};
-    YTSearch({key: API_KEY, term: 'surfboards'}, (videos) => {this.setState({ videos })});
 
   };
+
+  componentDidMount() {
+    YTSearch({key: API_KEY, term: 'surfboards'}, (videos) => {
+      this.setState({ videos })
+    });
+  }
 
   render() {
     return (
       <div>
         <SearchBar />
+        <VideoList videos={this.state.videos} />
       </div>
     )
   }
