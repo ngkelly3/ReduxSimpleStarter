@@ -13,17 +13,14 @@ const API_KEY = 'AIzaSyB_LPp1iO9UqxA_HK8DtQ27JNm6MSothpk';
 // some HTML (but we haven't sent it to the DOM yet!)
 class App extends Component {
 
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      videos: [],
-      selectedVideo: null
-    };
-
-    this.videoSearch('surfboards');
-
+  state = {
+    videos: [],
+    selectedVideo: null
   };
+
+  componentDidMount() {
+    this.videoSearch('surfboards');
+  }
 
   videoSearch = (term) => {
     YTSearch({key: API_KEY, term: term}, (videos) => {
