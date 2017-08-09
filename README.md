@@ -1,25 +1,12 @@
-# ReduxSimpleStarter
+# YouTube Clone
 
-Interested in learning [Redux](https://www.udemy.com/react-redux/)?
+This app is a YouTube clone I made using React.  It's quite a bit faster than YouTube...
 
 ### Getting Started
 
-There are two methods for getting started with this repo.
+Install dependencies using "npm install"
+Navigate to http://localhost:8080 to run the app
 
-#### Familiar with Git?
-Checkout this repo, install dependencies, then start the gulp process with the following:
+### Miscellaneous
 
-```
-> git clone https://github.com/StephenGrider/ReduxSimpleStarter.git
-> cd ReduxSimpleStarter
-> npm install
-> npm start
-```
-
-#### Not Familiar with Git?
-Click [here](https://github.com/StephenGrider/ReactStarter/releases) then download the .zip file.  Extract the contents of the zip file, then open your terminal, change to the project directory, and:
-
-```
-> npm install
-> npm start
-```
+The search field uses debounce to update the search query over after an interval of time
